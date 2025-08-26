@@ -5,7 +5,7 @@ This is your first qualification task. Please read the instructions carefully.
 
 ---
 
-## 📝 Task Details
+##  Task Details
 - **UI Design:** Attached to your email (for reference if needed).
 - **Data Link:** link sent to your email
 - **Duration:** 72 hours from when you received the mail.
