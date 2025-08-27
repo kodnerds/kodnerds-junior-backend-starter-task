@@ -1,0 +1,27 @@
+{
+  "name": "kodnerds-junior-backend-starter-task",
+  "version": "1.0.0",
+  "description": "Welcome to the **Kodnerds Junior Dev Challenge – Backend Track**.  \r This is your first qualification task. Please read the instructions carefully.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olalekanali/kodnerds-junior-backend-starter-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/olalekanali/kodnerds-junior-backend-starter-task/issues"
+  },
+  "homepage": "https://github.com/olalekanali/kodnerds-junior-backend-starter-task#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0",
+    "nodemon": "^3.1.10"
+  }
+}
