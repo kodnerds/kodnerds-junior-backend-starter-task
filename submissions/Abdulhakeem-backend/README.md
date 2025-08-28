@@ -99,7 +99,7 @@ Content-Type: application/json
 ```
 ### sample get response
 
-![getresponse](https://github.com/kodnerds/kodnerds-junior-backend-starter-task/submissions/blob/Abdulhakeem-backend/example_testing.png)
+![getresponse](https://github.com/aatikah/kodnerds-junior-backend-starter-task/blob/Abdulhakeem-backend/submissions/Abdulhakeem-backend/example_testing.PNG)
 
 ## Pagination
 This project uses limit/offset pagination via DRF `LimitOffsetPagination`.
