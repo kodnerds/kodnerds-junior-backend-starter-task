@@ -7,8 +7,8 @@ const booksSchema = new mongoose.Schema(
         readMore: { type: String, required: true },
         image: { type: String, require: true },
         author: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
-        views: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
-        likes: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
+        views: { type: Number },
+        likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "users" }],
         comments: [
             {
                 users: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
