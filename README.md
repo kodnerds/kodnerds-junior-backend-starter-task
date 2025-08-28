@@ -1,61 +1,145 @@
 # Kodnerds Junior Dev Challenge – Task 1 (Backend)
 
-Welcome to the **Kodnerds Junior Dev Challenge – Backend Track**.  
-This is your first qualification task. Please read the instructions carefully.
-
+This is my solution for **Kodnerds Junior Dev Challenge – Backend Track**.
 ---
 
-##  Task Details
-- **UI Design:** Attached to your email (for reference if needed).
-- **Data Link:** link sent to your email
-- **Duration:** 72 hours from when you received the mail.
+## Tools
+- **Node.js** with **Express.js** for Restful APIs
 
-You are required to:
-1. Fork this repository.
-2. Set up a backend project **from scratch** using **any stack of your choice**  
-   (Node.js, Python/Django, Flask, Ruby on Rails, etc.).
-3. Create APIs to serve or process the given data.
-4. Ensure endpoints return **clean and structured JSON** responses.
-
+## Architecture
+- Clean architecture to allow separation of logic,improved scalability and maintainability.
 ---
 
-##  Project Structure
-- Place your project inside:  
-  `submissions/<your-name>/`
-
-Example:submissions/blessing-backend/
-
-
-Inside your folder, include:
-- Your project source code.
-- A `README.md` file with:
-  - How to run your backend.
-  - Endpoints created & sample responses.
-  - Where AI tools were used (if any).
-  - Challenges faced & how you solved them.
-
+## Features
+- CRUD endpoints for the dataset
+- Data validation for endpoint
+- Error handling
 ---
 
-##  Tech Freedom
-You are free to choose **any backend framework or language**.  
-We want to see **your approach to backend setup & API design**.
+### Prerequistes
+- Node.js v18+
+- npm or yarn
+--
 
+```bash
+git clone https://github.com/yourorg/codequest_backend.git
+cd submissions
+npm install
+npm run start
+
+proceed to use any endpoint
+Server runs at `http://localhost:2000` by default.
+```
 ---
 
-## Submission Instructions
-- Create a new branch: `firstname-backend` (e.g., `blessing-backend`).
-- Commit your work inside `submissions/<your-name>/`.
-- Push your branch and create a **Pull Request** to this repository.
-- **Deadline:** 72 hours from when you got the email.
+## Endpoints
 
-Late submissions will **not** be considered.
+### CRUD Endpoint
+- **GET** `/kodnerds/all` - Get all Data present
+```bash
+{
+    "code": 200,
+    "success": true,
+    "message": "Data retrieved successfully",
+    "total": 6,
+    "page": 1,
+    "limit": 6,
+    "totalPages": 1,
+    "hasNext": false,
+    "hasPrev": false,
+    "data": [
+        {
+            "id": 1,
+            "author": "Faaruq Azeez",
+            "date": "23 May, 2024",
+            "title": "Energy Efficiency ideas to improve business sustainability",
+            "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+            "image": "https://via.placeholder.com/300x200",
+            "views": 20,
+            "likes": 20,
+            "comments": 20,
+            "readMore": "#"
+        },
+    ]
+}     
+```
+```bash
+you could also set how many pages and data should be returned
+```
+- **GET** `/kodnerds/all?page=1&limit=10` - Get your set amount of data (Pagination)
+```bash
+{
+    "id": 1,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Energy Efficiency ideas to improve business sustainability",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 20,
+    "likes": 20,
+    "comments": 20,
+    "readMore": "#"
+}
+```
+- **POST** `/kodnerds/create` - Create a new dataset
+```bash
+{
+    "code": 201,
+    "success": true,
+    "message": "New data added successfully",
+    "data": {
+        "id": 7,
+        "author": "George Orwell",
+        "date": "17 August,1945",
+        "title": "Fire and Blood, Game of thrones",
+        "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+        "image": "https://en.wikipedia.org/wiki/File:Animal_Farm_-_1st_edition.jpg",
+        "views": 20,
+        "likes": 20,
+        "readMore": "#"
+    }
+}
+```
+- **PUT** `/kodnerds/:id/edit` - Update an existing dataset passing the id as a parameter
+```bash
+{
+    "code": 200,
+    "success": true,
+    "message": "Data updated successfully",
+    "Updated": {
+        "id": 7,
+        "author": "George Orwell",
+        "date": "17 August,1945",
+        "title": "Fire and Blood, Game of thrones",
+        "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+        "image": "https://en.wikipedia.org/wiki/File:Animal_Farm_-_1st_edition.jpg",
+        "views": 100,
+        "likes": 20,
+        "readMore": "#"
+    }
+}
+```
+- **DELETE** `/kodnerds/:id/delete` - Delete an existing dataset
+```bash
+{
+    "code": 200,
+    "success": true,
+    "message": "Data deleted successfully",
+    "Deleted": {
+        "id": 10,
+        "author": "Frank Herbert",
+        "date": "17 August,1945",
+        "title": "Dune the Messaiah",
+        "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+        "image": "https://i.ebayimg.com/images/g/BWYAAOSwF8VlGYbn/s-l960.webp",
+        "views": 30,
+        "likes": 50,
+        "readMore": "#"
+    }
+}
+```
 
----
-
-## ⚡ Important Notes
-- Document any **AI usage** in your README file.
-- Include test data or clear instructions for testing endpoints.
-- Clean code and proper folder structure will be scored higher.
-
-Good luck! 
+## ⚡ Challenges Faced
+- Had an Error where i could not read data from my file path,had to use external suggestion(ChatGPT) on how to restructure my folder
+--- 
 

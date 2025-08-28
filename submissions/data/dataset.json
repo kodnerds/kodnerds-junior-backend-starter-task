@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Energy Efficiency ideas to improve business sustainability",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 20,
+    "likes": 20,
+    "comments": 20,
+    "readMore": "#"
+  },
+  {
+    "id": 2,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Reducing Carbon Emissions through Tech Innovation",
+    "description": "Leveraging technology for greener energy solutions.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 25,
+    "likes": 18,
+    "comments": 22,
+    "readMore": "#"
+  },
+  {
+    "id": 3,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Top Strategies for Water Conservation in Business",
+    "description": "Simple steps for managing water resources effectively.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 30,
+    "likes": 15,
+    "comments": 10,
+    "readMore": "#"
+  },
+  {
+    "id": 4,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Top Strategies for Water Conservation in Business",
+    "description": "Simple steps for managing water resources effectively.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 30,
+    "likes": 15,
+    "comments": 10,
+    "readMore": "#"
+  },
+  {
+    "id": 5,
+    "author": "Desmond Croft",
+    "date": "20 March, 2021",
+    "title": "Biochemical constituents of mining sites",
+    "description": "Simple steps for managing water resources effectively.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 30,
+    "likes": 15,
+    "comments": 10,
+    "readMore": "#"
+  },
+  {
+    "id": 6,
+    "author": "George R, R, Martin",
+    "date": "23 May, 2024",
+    "title": "Fire and Blood, Game of thrones",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 20,
+    "likes": 20,
+    "readMore": "#"
+  },
+  {
+    "id": 7,
+    "author": "George Orwell",
+    "date": "17 August,1945",
+    "title": "Fire and Blood, Game of thrones",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://en.wikipedia.org/wiki/File:Animal_Farm_-_1st_edition.jpg",
+    "views": 100,
+    "likes": 20,
+    "readMore": "#"
+  },
+  {
+    "id": 8,
+    "author": "George Orwell",
+    "date": "17 August,1945",
+    "title": "Fire and Blood, Game of thrones",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://en.wikipedia.org/wiki/File:Animal_Farm_-_1st_edition.jpg",
+    "views": 20,
+    "likes": 20,
+    "readMore": "#"
+  },
+  {
+    "id": 9,
+    "author": "Frank Herbert",
+    "date": "17 August,1945",
+    "title": "Dune",
+    "description": " Following Frank Herbert's original series are numerous prequel and sequel novels by Brian Herbert and Kevin J. Anderson, with the Prelude to Dune trilogy starting in 1999 and the Legends of Dune trilogy beginning in 2002.",
+    "image": "https://en.wikipedia.org/wiki/File:Animal_Farm_-_1st_edition.jpg",
+    "views": 20,
+    "likes": 20,
+    "readMore": "#"
+  },
+  {
+    "id": 10,
+    "author": "Frank Herbert",
+    "date": "17 August,1945",
+    "title": "Dune the Messaiah",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://i.ebayimg.com/images/g/BWYAAOSwF8VlGYbn/s-l960.webp",
+    "views": 30,
+    "likes": 50,
+    "readMore": "#"
+  }
+]
