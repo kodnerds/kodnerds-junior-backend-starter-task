@@ -5,8 +5,8 @@ const validateToken = require('../middlewares/validateToken')
 const router = express.Router()
 
 
-router.get('/:id', getBooksById)
 router.get('/', getBooks)
+router.get('/:id', getBooksById)
 
 router.use(validateToken)
 router.post('/create', validateCreateBooks, createBook)
