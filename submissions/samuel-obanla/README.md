@@ -294,12 +294,28 @@ All errors return a consistent structure:
 
 ```json
 {
-  "status": <code>,
+  "success": false,
   "message": "<error message>"
 }
 ```
 
 Validation errors include detailed field-level feedback.
+
+---
+
+## ✅ Successful Response Format
+
+All Successful Response return a consistent structure:
+
+```json
+{
+  "success": true,
+  "message": "<success message>",
+  "data": {...}
+}
+```
+
+Ensuring consistency in giving response.
 
 ---
 
