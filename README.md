@@ -5,6 +5,8 @@ This is my solution for **Kodnerds Junior Dev Challenge – Backend Track**.
 
 ## Tools
 - **Node.js** with **Express.js** for Restful APIs
+**Language** 
+- Typescript
 
 ## Architecture
 - Clean architecture to allow separation of logic,improved scalability and maintainability.
@@ -19,10 +21,11 @@ This is my solution for **Kodnerds Junior Dev Challenge – Backend Track**.
 ### Prerequistes
 - Node.js v18+
 - npm or yarn
+- Typescript
 --
 
 ```bash
-git clone https://github.com/yourorg/codequest_backend.git
+git clone https://github.com/idongesit98/kodnerds-junior-backend-starter-task
 cd submissions
 npm install
 npm run start
@@ -140,6 +143,6 @@ you could also set how many pages and data should be returned
 ```
 
 ## ⚡ Challenges Faced
-- Had an Error where i could not read data from my file path,had to use external suggestion(ChatGPT) on how to restructure my folder
+- Had an Error where i could not read data from my file path,had to use external suggestion(ChatGPT) on how to restructure my folder and place my dataset properly
 --- 
 
