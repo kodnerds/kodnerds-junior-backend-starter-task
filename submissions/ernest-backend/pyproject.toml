@@ -1,0 +1,31 @@
+[project]
+name = "ernest-backend"
+version = "0.1.0"
+description = "Django REST API for dataset management"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "Ihezie Ernest Uchenna", email="iernest61@gmail.com"}
+]
+dependencies = [
+    "Django~=5.2.3",
+    "djangorestframework~=3.15.2",
+    "django-cors-headers~=4.4.0",
+    "django-filter~=23.0",
+    "psycopg~=3.1.0",
+    "python-decouple~=3.8"
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+select = ["E", "F", "W", "I", "B", "C4", "UP"]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
