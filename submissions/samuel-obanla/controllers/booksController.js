@@ -211,7 +211,7 @@ const views = asyncHandler(async (req, res) => {
             });
         }
 
-        res.status(200).json({
+        res.status(201).json({
             success: true,
             message: "View Increased",
             data: {
@@ -241,6 +241,30 @@ const deleteBook = asyncHandler(async (req, res) => {
             success: true,
             message: `${book.title} deleted successfully`
         });  
+    } catch (err) {
+        res.status(500).json({ message: "Unable to delete book", error: err.message });
+    }
+})
+
+const searchForBook = asyncHandler(async (req, res) => {
+    try {
+        if (!req.query.q) {
+            return res.status(404).json({ 
+                success: false, 
+                message: "Search query is missing" 
+            });
+        }
+
+        const results = await books.find(
+            { $text: { $search: keyword } },
+            { score: { $meta: "textScore" } }
+        ).sort({ score: { $meta: "textScore" } });
+
+        res.status(200).json({
+            success: true,
+            message: 'Books with related keywords',
+            data: results
+        })
     } catch (err) {
         res.status(500).json({ message: "Unable to delete book", error: err.message });
     }
