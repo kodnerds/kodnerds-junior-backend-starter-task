@@ -186,10 +186,10 @@ const comment = asyncHandler(async (req, res) => {
             });
         }
 
-        res.status(201).json({
+        res.status(200).json({
             success: true,
             message: "Comment added successfully",
-            book: updatedBook,
+            data: updatedBook,
         });
     } catch (error) {
         res.status(500).json({ message: "Unable to add comment", error: err.message });
