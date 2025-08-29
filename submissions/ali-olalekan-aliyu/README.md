@@ -96,27 +96,16 @@ Server will run at:
 
 ---
 
-
-Perfect 👍 since you used **Postman**, let’s rewrite the manual test example in the README using **Postman steps** instead of cURL.
-
-Here’s the updated **README section** for manual testing:
-
-```markdown
----
-
 ## 🧪 Example Request (Manual Test with Postman)
 
 ### 1. Create a Post
 - Open **Postman**
 - Select **POST** method
 - Enter URL:  [http://localhost:3000/api/posts](http://localhost:3000/api/posts)
-```
 
-
-
-````
 - Go to the **Body** tab → Select **raw** → Choose **JSON**
 - Paste this sample JSON:
+
 ```json
 {
   "author": "Faaruq Azeez",
@@ -162,7 +151,7 @@ Here’s the updated **README section** for manual testing:
 * URL:
 
   ```
-  http://localhost:3000/api/posts?page=1&limit=5
+  http://localhost:3000/api/posts?page=1&limit=4
   ```
 * Click **Send**
 
