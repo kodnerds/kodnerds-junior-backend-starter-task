@@ -5,6 +5,7 @@ const usersSchema = new mongoose.Schema(
         firstName: { type: String, required: true },
         lastName: { type: String, required: true },
         email: { type: String, required: true, unique: true },
+        phoneNumber: { type: String, required: true },
         booksCreated: { type: [mongoose.Schema.Types.ObjectId], ref: "books" },
         password: { type: String, required: true },
         isVerified: { type: Boolean, default: false },
