@@ -24,8 +24,9 @@ app.use('/api/v1/user', require('./routers/usersRouter'))
 app.use('/api/v1/books', require('./routers/booksRouter'))
 app.use(handleError)
 
-// module.exports = app;
+module.exports = app;
 
-app.listen( process.env.PORT, ()=>{
-    console.log(`server starts on port ${process.env.PORT} `);
-})
+if (require.main === module) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`server starts on port ${PORT}`));
+}

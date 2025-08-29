@@ -40,9 +40,10 @@ const registerUser = asyncHandler(async (req, res) => {
 
         // handle OTP verification here
 
-        res.status(201).json({
+        res.status(200).json({
             success: true,
-            message: "User registered successfully"
+            message: "User registered successfully",
+            data: newUser
         });
 
     } catch (err) {
