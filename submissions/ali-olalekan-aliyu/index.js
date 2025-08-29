@@ -44,7 +44,7 @@ app.post("/api/posts", async (req, res) => {
 });
 
 // To Read all Posts with Pagination
-app.get("/posts", async (req, res) => {
+app.get("/api/posts", async (req, res) => {
   try {
     let { page, limit, offset } = req.query;
 

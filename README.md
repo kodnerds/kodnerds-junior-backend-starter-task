@@ -1,61 +1,198 @@
-# Kodnerds Junior Dev Challenge – Task 1 (Backend)
 
-Welcome to the **Kodnerds Junior Dev Challenge – Backend Track**.  
-This is your first qualification task. Please read the instructions carefully.
+# Kodnerds Task 1 – RESTful API with Pagination
 
----
-
-##  Task Details
-- **UI Design:** Attached to your email (for reference if needed).
-- **Data Link:** link sent to your email
-- **Duration:** 72 hours from when you received the mail.
-
-You are required to:
-1. Fork this repository.
-2. Set up a backend project **from scratch** using **any stack of your choice**  
-   (Node.js, Python/Django, Flask, Ruby on Rails, etc.).
-3. Create APIs to serve or process the given data.
-4. Ensure endpoints return **clean and structured JSON** responses.
+This project is a RESTful API built with **Node.js, Express, and MongoDB (Mongoose)**.  
+It allows you to create, read, update, and delete posts, with support for **pagination**.
 
 ---
 
-##  Project Structure
-- Place your project inside:  
-  `submissions/<your-name>/`
-
-Example:submissions/blessing-backend/
-
-
-Inside your folder, include:
-- Your project source code.
-- A `README.md` file with:
-  - How to run your backend.
-  - Endpoints created & sample responses.
-  - Where AI tools were used (if any).
-  - Challenges faced & how you solved them.
+## 🚀 Features
+- Create new posts
+- Retrieve all posts with **pagination** (`page`, `limit`, `offset`)
+- Retrieve a single post (by `id`)
+- Update a post
+- Delete a post
+- Automatic timestamps (`createdAt`, `updatedAt`)
+- Proper error handling and validation
 
 ---
 
-##  Tech Freedom
-You are free to choose **any backend framework or language**.  
-We want to see **your approach to backend setup & API design**.
+## 📂 Project Setup
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd <your-repo-folder>
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure MongoDB
+
+Update the connection string in **index.js**:
+
+```js
+mongoose.connect("your-mongodb-uri-here")
+```
+
+Example using MongoDB Atlas:
+
+```txt
+mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+```
+
+### 4. Start the server
+
+```bash
+npm start
+```
+
+or if you’re using `nodemon`:
+
+```bash
+npm run dev
+```
+
+Server will run at:
+👉 `http://localhost:3000`
 
 ---
 
-## Submission Instructions
-- Create a new branch: `firstname-backend` (e.g., `blessing-backend`).
-- Commit your work inside `submissions/<your-name>/`.
-- Push your branch and create a **Pull Request** to this repository.
-- **Deadline:** 72 hours from when you got the email.
+## 📌 API Endpoints
 
-Late submissions will **not** be considered.
+* **Create a Post**
+
+  ```http
+  POST /api/posts
+  ```
+
+* **Get All Posts (with Pagination)**
+
+  ```http
+  GET /api/posts?page=1&limit=5
+  ```
+
+* **Get Single Post**
+
+  ```http
+  GET /api/posts/:id
+  ```
+
+* **Update a Post**
+
+  ```http
+  PUT /api/posts/:id
+  ```
+
+* **Delete a Post**
+
+  ```http
+  DELETE /api/posts/:id
+  ```
 
 ---
 
-## ⚡ Important Notes
-- Document any **AI usage** in your README file.
-- Include test data or clear instructions for testing endpoints.
-- Clean code and proper folder structure will be scored higher.
 
-Good luck! 
+Perfect 👍 since you used **Postman**, let’s rewrite the manual test example in the README using **Postman steps** instead of cURL.
 
+Here’s the updated **README section** for manual testing:
+
+```markdown
+---
+
+## 🧪 Example Request (Manual Test with Postman)
+
+### 1. Create a Post
+- Open **Postman**
+- Select **POST** method
+- Enter URL:  [http://localhost:3000/api/posts](http://localhost:3000/api/posts)
+```
+
+
+
+````
+- Go to the **Body** tab → Select **raw** → Choose **JSON**
+- Paste this sample JSON:
+```json
+{
+  "author": "Faaruq Azeez",
+  "title": "Energy Efficiency ideas to improve business sustainability",
+  "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+  "image": "https://via.placeholder.com/300x200",
+  "views": 20,
+  "likes": 20,
+  "comments": 20,
+  "readMore": "#"
+}
+````
+
+* Click **Send**
+
+✅ Example Response:
+
+```json
+{
+  "message": "Post created successfully",
+  "post": {
+    "_id": "64b160ba99a1d5857acc08a9",
+    "author": "Faaruq Azeez",
+    "title": "Energy Efficiency ideas to improve business sustainability",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 20,
+    "likes": 20,
+    "comments": 20,
+    "readMore": "#",
+    "createdAt": "2025-08-29T07:42:10.123Z",
+    "updatedAt": "2025-08-29T07:42:10.123Z",
+    "__v": 0
+  }
+}
+```
+
+---
+
+### 2. Get All Posts (with Pagination)
+
+* Method: **GET**
+* URL:
+
+  ```
+  http://localhost:3000/api/posts?page=1&limit=5
+  ```
+* Click **Send**
+
+✅ Example Response:
+
+```json
+{
+  "message": "Posts retrieved successfully",
+  "pagination": {
+    "totalPosts": 5,
+    "currentPage": 1,
+    "totalPages": 1,
+    "limit": 5,
+    "offset": 0
+  },
+  "posts": [
+    {
+      "_id": "64b160ba99a1d5857acc08a9",
+      "author": "Faaruq Azeez",
+      "title": "Energy Efficiency ideas to improve business sustainability",
+      "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+      "image": "https://via.placeholder.com/300x200",
+      "views": 20,
+      "likes": 20,
+      "comments": 20,
+      "readMore": "#",
+      "createdAt": "2025-08-29T07:42:10.123Z",
+      "updatedAt": "2025-08-29T07:42:10.123Z",
+      "__v": 0
+    }
+  ]
+}
+```

@@ -33,7 +33,7 @@ mongoose.connect("your-mongodb-uri-here")
 ```
 ### 4. Start the server
 ```bash
-mongoose.connect("your-mongodb-uri-here")
+npm start
 ```
 or if you’re using `nodemon`:
 ```bash
