@@ -21,6 +21,14 @@ venv.bak/
 uv.lock
 .uvlock
 
+# Python packaging and distribution
+.eggs/
+*.egg-info/
+*.egg
+dist/
+build/
+pip-wheel-metadata/
+
 # IDE
 .vscode/
 .idea/
@@ -47,10 +55,6 @@ htmlcov/
 .coverage.xml
 .coverage.json
 
-# Database migrations (optional - be careful with this!)
-# */migrations/*.py
-# !*/migrations/__init__.py
-
 # Environment variables
 .env
 .env.local
@@ -76,3 +80,7 @@ htmlcov/
 .pytest_cache/
 .mypy_cache/
 .tox/
+
+# Logs
+logs/
+*.log
