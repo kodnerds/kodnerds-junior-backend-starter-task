@@ -195,6 +195,15 @@ Base URL:
 
 ---
 
+#### **Search For Books Using Keywords**
+
+`PUT /api/v1/books/search?q=keyword`
+
+* ✅ 200 — Founded books with related keywords
+* ❌ 404 — Search query not found or not passed
+
+---
+
 #### **Create Book** (🔒 Protected)
 
 `POST /api/v1/books/create`

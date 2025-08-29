@@ -211,7 +211,7 @@ const views = asyncHandler(async (req, res) => {
             });
         }
 
-        res.status(201).json({
+        res.status(200).json({
             success: true,
             message: "View Increased",
             data: {
@@ -248,7 +248,8 @@ const deleteBook = asyncHandler(async (req, res) => {
 
 const searchForBook = asyncHandler(async (req, res) => {
     try {
-        if (!req.query.q) {
+        const keyword = req.query.q
+        if (!keyword) {
             return res.status(404).json({ 
                 success: false, 
                 message: "Search query is missing" 
@@ -266,7 +267,7 @@ const searchForBook = asyncHandler(async (req, res) => {
             data: results
         })
     } catch (err) {
-        res.status(500).json({ message: "Unable to delete book", error: err.message });
+        res.status(500).json({ message: "Unable to get books", error: err.message });
     }
 })
 
@@ -279,5 +280,6 @@ module.exports = {
     likeBook,
     comment,
     views,
-    deleteBook
+    deleteBook,
+    searchForBook
 }

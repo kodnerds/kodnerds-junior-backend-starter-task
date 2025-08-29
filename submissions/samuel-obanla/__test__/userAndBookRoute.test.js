@@ -138,7 +138,7 @@ describe('User Route', () => {
         })
     })
 
-    describe('PUT /api/v1/comment/:id', () => {
+    describe('PUT /api/v1/books/comment/:id', () => {
         it('Should be able to comment on a book', async () => {
             const data = {
                 comment: "testing comment, nice test book"
@@ -154,7 +154,7 @@ describe('User Route', () => {
         })
     })
 
-    describe('PUT /api/v1/view/:id', () => {
+    describe('PUT /api/v1/books/view/:id', () => {
         it('Should be able to increase a book views', async () => {
             const res = await request(app)
                 .put(`/api/v1/books/view/${bookId}`)
@@ -163,6 +163,16 @@ describe('User Route', () => {
             expect(res.statusCode).toBe(200);
             expect(res.body.success).toBe(true);
             expect(res.body.data).toHaveProperty('view');
+        })
+    })
+
+    describe('GET /api/v1/books/search?q=keyword', () => {
+        it('Should be able to get all books with the specified KEYWORD passed either in TITLE OR DESCRIPTION', async () => {
+            const res = await request(app)
+                .get('/api/v1/books/search?q=book')
+            expect(res.statusCode).toBe(200);
+            expect(res.body.success).toBe(true);
+            expect(res.body).toHaveProperty('data')
         })
     })
 

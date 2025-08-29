@@ -1,11 +1,12 @@
 const express = require('express')
 const { validateCreateBooks, validateUpdateBooks, validateBooksComments } = require('../validators/booksValidator')
-const { createBook, updateBook, getBooks, getBooksById, likeBook, comment, views, deleteBook } = require('../controllers/booksController')
+const { createBook, updateBook, getBooks, getBooksById, likeBook, comment, views, deleteBook, searchForBook } = require('../controllers/booksController')
 const validateToken = require('../middlewares/validateToken')
 const router = express.Router()
 
 
 router.get('/', getBooks)
+router.get('/search', searchForBook)
 router.get('/:id', getBooksById)
 
 router.use(validateToken)
