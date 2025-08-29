@@ -4,7 +4,6 @@ const PostSchema = new mongoose.Schema(
   {
     id: { type: Number, required: true },
     author: { type: String, required: true },
-    date: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
     image: { type: String },
@@ -13,7 +12,7 @@ const PostSchema = new mongoose.Schema(
     comments: { type: Number, default: 0 },
     readMore: { type: String },
   },
-  { timestamps: true }
+  { timestamps: true } 
 );
 
 const Post = mongoose.model("Post", PostSchema);
