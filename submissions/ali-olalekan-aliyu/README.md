@@ -23,3 +23,21 @@ It allows you to create, read, update, and delete posts, with support for **pagi
 git clone <your-repo-url>
 cd <your-repo-folder>
 ```
+### 2. Install dependencies
+```bash
+npm install
+```
+### 3. Configure MongoDB
+```bash
+mongoose.connect("your-mongodb-uri-here")
+```
+### 4. Start the server
+```bash
+mongoose.connect("your-mongodb-uri-here")
+```
+or if you’re using `nodemon`:
+```bash
+npm run dev
+```
+Server will run at:
+👉 `http://localhost:3000`

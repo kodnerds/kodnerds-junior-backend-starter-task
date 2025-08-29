@@ -49,7 +49,7 @@ app.get("/posts", async (req, res) => {
     let { page, limit, offset } = req.query;
 
     page = parseInt(page) || 1;
-    limit = parseInt(limit) || 6;
+    limit = parseInt(limit) || 4;
     offset = parseInt(offset) || (page - 1) * limit;
 
     if (page < 1 || limit < 1 || offset < 0) {
