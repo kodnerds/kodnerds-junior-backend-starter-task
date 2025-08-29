@@ -9,7 +9,7 @@ This is my solution for **Kodnerds Junior Dev Challenge – Backend Track**.
 - Typescript
 
 ## Architecture
-- Clean architecture to allow separation of logic,improved scalability and maintainability.
+- Service-Layered architecture to allow separation of logic,improved scalability and maintainability.
 ---
 
 ## Features
