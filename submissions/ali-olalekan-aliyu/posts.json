@@ -1,0 +1,52 @@
+ [
+  {
+    "id": 1,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Energy Efficiency ideas to improve business sustainability",
+    "description": "Energy Efficiency with Business Sustainability for substantial savings.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 20,
+    "likes": 20,
+    "comments": 20,
+    "readMore": "#"
+  },
+  {
+    "id": 2,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Reducing Carbon Emissions through Tech Innovation",
+    "description": "Leveraging technology for greener energy solutions.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 25,
+    "likes": 18,
+    "comments": 22,
+    "readMore": "#"
+  },
+  {
+    "id": 3,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Top Strategies for Water Conservation in Business",
+    "description": "Simple steps for managing water resources effectively.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 30,
+    "likes": 15,
+    "comments": 10,
+    "readMore": "#"
+  },
+  {
+    "id": 4,
+    "author": "Faaruq Azeez",
+    "date": "23 May, 2024",
+    "title": "Top Strategies for Water Conservation in Business",
+    "description": "Simple steps for managing water resources effectively.",
+    "image": "https://via.placeholder.com/300x200",
+    "views": 30,
+    "likes": 15,
+    "comments": 10,
+    "readMore": "#"
+  }
+
+
+]
